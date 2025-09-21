@@ -97,7 +97,7 @@ with torch.no_grad():
 
         # Resize 回原图大小
         pred_mask = cv2.resize(pred_mask, orig_size, interpolation=cv2.INTER_NEAREST)
-
+        pred_mask = 255 - pred_mask
         cv2.imwrite(os.path.join(mask_dir, img_name), pred_mask)
 
 print("全部预测掩码已保存到 pred_masks/ 文件夹")
