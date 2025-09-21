@@ -3,7 +3,6 @@ import random
 import numpy as np
 from PIL import Image, ImageEnhance
 import cv2
-import torch
 from torch.utils.data import Dataset
 import torchvision.transforms.functional as F
 
